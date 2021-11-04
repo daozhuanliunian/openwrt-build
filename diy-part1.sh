@@ -13,4 +13,4 @@
 
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
-git clone https://github.com/r1172464137/luci-theme-edge.git  openwrt/package/lean  
+git clone https://github.com/r1172464137/luci-theme-edge.git  /package/lean  
