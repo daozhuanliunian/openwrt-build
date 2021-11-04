@@ -12,6 +12,6 @@
 # sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-#sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
-#cd package/lean
-#git clone https://github.com/r1172464137/luci-theme-edge.git
+# sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
+# cd package/lean
+# git clone https://github.com/r1172464137/luci-theme-edge.git
