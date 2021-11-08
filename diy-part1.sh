@@ -18,6 +18,7 @@ echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.defau
 echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
 #添加主题
-rm -rf package/lean/luci-theme-argon 
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git  package/lean
-git clone -b 18.06 https://github.com/r1172464137/luci-theme-edge.git package/lean
+cd package/lean
+rm -rf luci-theme-argon 
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git 
+git clone -b 18.06 https://github.com/r1172464137/luci-theme-edge.git
