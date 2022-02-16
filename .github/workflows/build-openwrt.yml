@@ -109,9 +109,6 @@ jobs:
       if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
       run: |
         tar  -zcvf lede.tgz openwrt
-        cd openwrt
-        cd bin/targets/*/*
-        rm -rf packages
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "::set-output name=status::success"
       
@@ -146,12 +143,6 @@ jobs:
         path: openwrt/bin
 
 
-    - name: Upload firmware directory
-      uses: actions/upload-artifact@main
-      if: steps.organize.outputs.status == 'success' && !cancelled()
-      with:
-        name: OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
-        path: ${{ env.FIRMWARE }}
 
     
     - name: Upload firmware to WeTransfer
